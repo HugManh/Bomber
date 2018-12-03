@@ -5,7 +5,7 @@ import uet.oop.bomberman.graphics.Sprite;
 
 public abstract class Item extends Tile {
 
-	protected int _duration = -1; // -1 is infinite, duration in lifes
+	protected int _duration = -1; // -1 , sử dụng Item vô hạn trong thời gian game
 	protected boolean _active = false;
 	protected int _level;
 	

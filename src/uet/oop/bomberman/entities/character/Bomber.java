@@ -162,9 +162,9 @@ public class Bomber extends Character {
     @Override
     public boolean canMove(double x, double y) {
         // TODO: kiểm tra có đối tượng tại vị trí chuẩn bị di chuyển đến và có thể di chuyển tới đó hay không
-        for (int c = 0; c < 4; c++) { //colision detection for each corner of the player
-            double xt = ((_x + x) + c % 2 * 11) / Game.TILES_SIZE; //divide with tiles size to pass to tile coordinate
-	    double yt = ((_y + y) + c / 2 * 12 - 13) / Game.TILES_SIZE; //these values are the best from multiple tests
+        for (int c = 0; c < 4; c++) { //kiểm tra xung đột quanh người chơi
+            double xt = ((_x + x) + c % 2 * 11) / Game.TILES_SIZE; //chuyển sang tọa độ các ô
+	    double yt = ((_y + y) + c / 2 * 12 - 13) / Game.TILES_SIZE;
 			
 	    Entity a = _board.getEntity(xt, yt, this);
 			
@@ -181,7 +181,7 @@ public class Bomber extends Character {
 	if(xa < 0) _direction = 3;
 	if(ya > 0) _direction = 2;
 	if(ya < 0) _direction = 0;
-		if(canMove(0, ya)) { //separate the moves for the player can slide when is colliding
+		if(canMove(0, ya)) {
 			_y += ya;
 		}
 		
