@@ -22,9 +22,10 @@ public class FlameSegment extends Entity {
 	 * @param y
 	 * @param direction
 	 * @param last cho biết segment này là cuối cùng của Flame hay không,
-	 *                segment cuối có sprite khác so với các segment còn lại
+	 * segment cuối có sprite khác so với các segment còn lại
          * @param board
 	 */
+        
 	public FlameSegment(int x, int y, int direction, boolean last,Board board) {
 		_x = x;
 		_y = y;
@@ -71,7 +72,10 @@ public class FlameSegment extends Entity {
 	}
 	
 	@Override
-	public void update() {}
+	public void update() 
+        {
+            //
+        }
 
         /*
         public void Sound(int character)
