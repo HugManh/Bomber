@@ -16,7 +16,7 @@ import uet.oop.bomberman.level.Coordinates;
 
 public class Bomb extends AnimatedEntitiy {
 
-	protected double _timeToExplode = 150; // 2.5 seconds
+	protected double _timeToExplode = 150; //2.5 seconds
 	public int _timeAfter = 20;
 	protected Board _board;
 	protected Flame[] _flames = null;
